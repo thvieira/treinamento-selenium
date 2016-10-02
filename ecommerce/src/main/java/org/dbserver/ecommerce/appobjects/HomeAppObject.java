@@ -10,11 +10,11 @@ import org.openqa.selenium.WebElement;
 public class HomeAppObject {	
 	private WebDriver driver;
 	
-	public HomeAppObject(WebDriver driver){
+	public HomeAppObject(WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	public WebElement getCreateAccountElement(){
+	public WebElement getCreateAccountButton() {
 		return driver.findElement(By.xpath("//*[contains(text(), 'Create an account')]"));
 	}
 }

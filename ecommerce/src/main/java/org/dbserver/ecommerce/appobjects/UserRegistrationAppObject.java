@@ -42,24 +42,3 @@ public class UserRegistrationAppObject {
 		return driver.findElement(By.xpath("//*[@type = 'submit' and text() = 'Register']"));
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

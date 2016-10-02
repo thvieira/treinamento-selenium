@@ -11,6 +11,6 @@ public class HomeTasks {
 	}
 	
 	public void accessRegistrationPage(){
-		home.getCreateAccountElement().click();
+		home.getCreateAccountButton().click();
 	}
 }
