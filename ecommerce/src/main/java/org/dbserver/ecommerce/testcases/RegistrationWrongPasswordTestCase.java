@@ -1,6 +1,6 @@
 package org.dbserver.ecommerce.testcases;
 
-import org.dbserver.ecommerce.framework.BrowserUtils;
+import org.dbserver.ecommerce.framework.DriverUtils;
 import org.dbserver.ecommerce.framework.ScreenShot;
 import org.dbserver.ecommerce.tasks.HomeTasks;
 import org.dbserver.ecommerce.tasks.UserRegistrationTasks;
@@ -15,7 +15,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class RegistrationWrongPasswordTestCase {
 	
-	public WebDriver driver = BrowserUtils.getFirefoxDriver();
+	public WebDriver driver = DriverUtils.getFirefoxDriver();
 	
 	private HomeTasks homePage = new HomeTasks(driver);
 	private UserRegistrationTasks userRegistration = new UserRegistrationTasks(driver);
