@@ -6,16 +6,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class BrowserUtils {
-	public static WebDriver MozillaFirefoxDriver(){
+	public static WebDriver getFirefoxDriver(){
 		return new FirefoxDriver();
 	}
 	
-	public static WebDriver InternetExplorerDriver(){
+	public static WebDriver getInternetExplorerDriver(){
 		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir").toString() + "/drivers/IEDriverServer.exe");
 		return new InternetExplorerDriver();
 	}
 	
-	public static WebDriver ChromeDriver() {
+	public static WebDriver getChromeDriver() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir").toString() + "/drivers/chromedriver.exe");
 		return new ChromeDriver();
 	}

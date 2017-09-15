@@ -2,9 +2,9 @@ package org.dbserver.ecommerce.testcases;
 
 import org.dbserver.ecommerce.framework.BrowserUtils;
 import org.dbserver.ecommerce.framework.ScreenShot;
-import org.dbserver.ecommerce.framework.VerificationPoint;
 import org.dbserver.ecommerce.tasks.HomeTasks;
 import org.dbserver.ecommerce.tasks.UserRegistrationTasks;
+import org.dbserver.ecommerce.verificationpoints.UserRegistrationVerificationPoint;
 import org.junit.AfterClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +15,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class RegistrationWrongPasswordTestCase {
 	
-	public WebDriver driver = BrowserUtils.MozillaFirefoxDriver();
+	public WebDriver driver = BrowserUtils.getFirefoxDriver();
 	
 	private HomeTasks homePage = new HomeTasks(driver);
 	private UserRegistrationTasks userRegistration = new UserRegistrationTasks(driver);
@@ -37,7 +37,7 @@ public class RegistrationWrongPasswordTestCase {
 		userRegistration.fillForm("Ana Terra", "anaterra", "mascada123", "mascada1234", "ana@terra.com.br", "ana@terra.com.br");		
 		userRegistration.toRegister();
 		
-		if(VerificationPoint.hasPasswordFieldErrorMessage(driver)) {
+		if(UserRegistrationVerificationPoint.hasPasswordFieldErrorMessage(driver)) {
 			logger.log(LogStatus.PASS, "Step Passed.", logger.addScreenCapture(ScreenShot.capture(driver)));
 		} else {
 			logger.log(LogStatus.FAIL, "Step Failed.", logger.addScreenCapture(ScreenShot.capture(driver)));

@@ -1,10 +1,10 @@
-package org.dbserver.ecommerce.framework;
+package org.dbserver.ecommerce.verificationpoints;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-public class VerificationPoint {
+public class UserRegistrationVerificationPoint {
 	
 	private static final String PASS_ERROR_MESSAGE = "The password you entered do not match.";
 	
