@@ -11,6 +11,16 @@ public class HomeTasks {
 	}
 	
 	public void accessRegistrationPage(){
-		home.getCreateAccountButton().click();
+		home.getAccountButton().click();
+	}
+	
+	public void login(String username, String password) {
+		home.getUsernameTextField().sendKeys(username);
+		home.getPasswordTextField().sendKeys(password);
+		home.getLoginButton().click();
+	}
+	
+	public void logout() {
+		home.getLoginButton().click();
 	}
 }

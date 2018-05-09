@@ -1,6 +1,7 @@
 package org.dbserver.ecommerce.testsuites;
 
 import org.dbserver.ecommerce.framework.Report;
+import org.dbserver.ecommerce.testcases.LoginTestCase;
 import org.dbserver.ecommerce.testcases.RegistrationWrongPasswordTestCase;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -10,6 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
+	LoginTestCase.class,
 	RegistrationWrongPasswordTestCase.class
 })
 public class RegressionTestSuite {

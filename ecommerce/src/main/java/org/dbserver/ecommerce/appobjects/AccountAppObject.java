@@ -7,35 +7,31 @@ import org.openqa.selenium.WebElement;
 /**
  * Classe para mapeamento dos objetos da página de registro de usuários.
  */
-public class UserRegistrationAppObject {
+public class AccountAppObject {
 	private WebDriver driver;
 	
-	public UserRegistrationAppObject(WebDriver driver){
+	public AccountAppObject(WebDriver driver){
 		this.driver = driver;
 	}
-	
-	public WebElement getNameTextField(){
-		return driver.findElement(By.id("jform_name"));
-	}	
 
+	public WebElement getEmailTextField(){		
+		return driver.findElement(By.id("email_field"));
+	}
+	
 	public WebElement getUsernameTextField(){		
-		return driver.findElement(By.id("jform_username"));
+		return driver.findElement(By.id("username_field"));
 	}
 
+	public WebElement getNameTextField(){
+		return driver.findElement(By.id("name_field"));
+	}	
+
 	public WebElement getPasswordTextField(){		
-		return driver.findElement(By.id("jform_password1"));
+		return driver.findElement(By.id("password_field"));
 	}
 	
 	public WebElement getConfirmPasswordTextField(){		
-		return driver.findElement(By.id("jform_password2"));
-	}
-	
-	public WebElement getEmailTextField(){		
-		return driver.findElement(By.id("jform_email1"));
-	}
-	
-	public WebElement getConfirmEmailTextField(){		
-		return driver.findElement(By.id("jform_email2"));
+		return driver.findElement(By.id("password2_field"));
 	}
 	
 	public WebElement getRegisterButton(){

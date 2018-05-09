@@ -4,8 +4,8 @@ import org.dbserver.ecommerce.framework.Drivers;
 import org.dbserver.ecommerce.framework.Report;
 import org.dbserver.ecommerce.framework.ScreenShot;
 import org.dbserver.ecommerce.tasks.HomeTasks;
-import org.dbserver.ecommerce.tasks.UserRegistrationTasks;
-import org.dbserver.ecommerce.verificationpoints.UserRegistrationVerificationPoint;
+import org.dbserver.ecommerce.tasks.AccountTasks;
+import org.dbserver.ecommerce.verificationpoints.AccountVerificationPoint;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,19 +15,20 @@ import com.aventstack.extentreports.Status;
 
 public class RegistrationWrongPasswordTestCase {
 	
-	public WebDriver driver;
+	private WebDriver driver;
 	
 	private HomeTasks homePage; 
-	private UserRegistrationTasks userRegistrationPage;
-	private UserRegistrationVerificationPoint verificationPoint;
+	private AccountTasks accountPage;
+	private AccountVerificationPoint verificationPoint;
 	
 	@Before
 	public void setUp() {
-		this.driver = Drivers.getFirefoxDriver();
+		Report.startTest("Register Fails");
+		driver = Drivers.getFirefoxDriver();
 		
-		this.homePage = new HomeTasks(driver);
-		this.userRegistrationPage = new UserRegistrationTasks(driver);
-		this.verificationPoint = new UserRegistrationVerificationPoint(driver);
+		homePage = new HomeTasks(driver);
+		accountPage = new AccountTasks(driver);
+		verificationPoint = new AccountVerificationPoint(driver);
 	}
 	
 	@Test
@@ -41,14 +42,14 @@ public class RegistrationWrongPasswordTestCase {
 		
 		Report.log(Status.INFO, "Register Page loaded.", ScreenShot.capture(driver));
 		
-		userRegistrationPage.fillForm("Ana Terra", "anaterra", "mascada123", "mascada1234", "ana@terra.com.br", "ana@terra.com.br");		
-		userRegistrationPage.toRegister();
+		accountPage.fillForm("Ana Terra", "anaterra", "mascada123", "mascada1234", "ana@terra.com.br");		
+		accountPage.toRegister();
 		
 		verificationPoint.checkPasswordFieldErrorMessage();
 	}	
 
 	@After
-	public void tearDownTest() {
-		this.driver.quit();
+	public void tearDown() {
+		driver.quit();
 	}
 }

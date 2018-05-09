@@ -14,7 +14,19 @@ public class HomeAppObject {
 		this.driver = driver;
 	}
 	
-	public WebElement getCreateAccountButton() {
-		return driver.findElement(By.xpath("//*[contains(text(), 'Create an account')]"));
+	public WebElement getAccountButton() {
+		return this.driver.findElement(By.linkText("Account"));
+	}
+	
+	public WebElement getUsernameTextField() {
+		return this.driver.findElement(By.id("modlgn-username"));
+	}
+
+	public WebElement getPasswordTextField() {
+		return this.driver.findElement(By.id("modlgn-passwd"));
+	}
+	
+	public WebElement getLoginButton() {
+		return this.driver.findElement(By.name("Submit"));
 	}
 }

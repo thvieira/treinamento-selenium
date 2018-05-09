@@ -6,13 +6,13 @@ import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.Status;
 
-public class UserRegistrationVerificationPoint {
+public class AccountVerificationPoint {
 	
 	private static final String PASSWORD_ERROR_MESSAGE = "The password you entered do not match.";
 	
 	private WebDriver driver;
 	
-	public UserRegistrationVerificationPoint(WebDriver driver) {
+	public AccountVerificationPoint(WebDriver driver) {
 		this.driver = driver;
 	}
 	
