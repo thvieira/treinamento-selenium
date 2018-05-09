@@ -6,7 +6,7 @@ import org.dbserver.ecommerce.framework.ScreenShot;
 import org.dbserver.ecommerce.tasks.HomeTasks;
 import org.dbserver.ecommerce.tasks.UserRegistrationTasks;
 import org.dbserver.ecommerce.verificationpoints.UserRegistrationVerificationPoint;
-import org.junit.AfterClass;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -47,8 +47,8 @@ public class RegistrationWrongPasswordTestCase {
 		verificationPoint.checkPasswordFieldErrorMessage();
 	}	
 
-	@AfterClass
-	public static void tearDownTest() {
-		Report.close();
+	@After
+	public void tearDownTest() {
+		this.driver.quit();
 	}
 }
