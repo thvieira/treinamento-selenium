@@ -23,5 +23,6 @@ O script de teste foi desenvolvido para a loja virtual de demonstraçao disponí
 Dependências obtidas através do gerenciador de dependências do Maven.
 
 * Selenium WebDriver - [seleniumhq.org](https://www.seleniumhq.org/)
+* WebDriver Manager - [github.com/bonigarcia/webdrivermanager](https://github.com/bonigarcia/webdrivermanager)
 * JUnit - [junit.org](https://junit.org/junit5/)
 * Extent Reports - [extentreports.com](http://extentreports.com/)
