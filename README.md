@@ -14,7 +14,7 @@ O script de teste foi desenvolvido para a loja virtual de demonstraçao disponí
 
 ### Pré requisitos
 
-* Eclipse IDE - [eclipse.org](http://www.eclipse.org/)
+* Eclipse IDE ou IntelliJ - [eclipse.org](http://www.eclipse.org/) e [jetbrains.com/idea](https://www.jetbrains.com/idea/)
 * Maven - [maven.apache.org](https://maven.apache.org/)
 * JDK 8 - [oracle.com](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
 
